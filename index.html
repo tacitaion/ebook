@@ -1,4 +1,10 @@
-<style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bibliothèque Française Gratuite 📚</title>
+  <style>
   body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f8f8f8;
@@ -103,3 +109,105 @@
     }
   }
 </style>
+
+</head>
+<body>
+
+<header>
+  <h1>📚 Bibliothèque Française Gratuite</h1>
+  <p>Top 5 livres à lire absolument — Téléchargement gratuit</p>
+</header>
+
+<div id="countdown">
+  Offre spéciale valable encore : <span id="timer">24:00:00</span>
+</div>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLtq4ElM0h0S97-T6qfm9dQ4dwse1KpirycXrNja4zJM9-MaKAZV0_hLwhQ&s" alt="Madame Bovary" />
+    <h3>Madame Bovary</h3>
+    <p>Gustave Flaubert</p>
+    <div class="rating">⭐⭐⭐⭐☆</div>
+    <div class="downloads">📥 12 438 téléchargements</div>
+    <a href="https://lockverify.org/cl/i/kr7exq">Télécharger</a>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrdXZrQetinN8J2DSZWoQ2w6BVU6aCPK-CfA&s" />
+    <h3>Les Misérables</h3>
+    <p>Victor Hugo</p>
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+    <div class="downloads">📥 21 003 téléchargements</div>
+    <a href="https://lockedapp.net/cl/i/n62wm4">Télécharger</a>
+  </div>
+
+  <!-- Book 3 -->
+  <div class="book">
+    <img src="https://images.epagine.fr/634/9782070466634_1_m.jpg" alt="Candide" />
+    <h3>Candide</h3>
+    <p>Voltaire</p>
+    <div class="rating">⭐⭐⭐⭐☆</div>
+    <div class="downloads">📥 9 782 téléchargements</div>
+    <a href="https://lockverify.net/cl/i/d2q4k7">Télécharger</a>
+  </div>
+
+  <!-- Book 4 -->
+  <div class="book">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgQpjI4PL4F6ftKkZnR0UYLNUz2vrckbViyQ&s" alt="Du côté de chez Swann" />
+    <h3>Du côté de chez Swann</h3>
+    <p>Marcel Proust</p>
+    <div class="rating">⭐⭐⭐⭐☆</div>
+    <div class="downloads">📥 8 201 téléchargements</div>
+    <a href="https://lockedapp.org/cl/i/ve9wvm">Télécharger</a>
+  </div>
+
+  <!-- Book 5 -->
+  <div class="book">
+    <img src="https://images.epagine.fr/250/9782070316250_1_m.jpg" alt="Pensées" />
+    <h3>Pensées</h3>
+    <p>Blaise Pascal</p>
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+    <div class="downloads">📥 10 917 téléchargements</div>
+    <a href="https://lockedapp.net/cl/i/27x6md">Télécharger</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Bibliothèque Gratuite. Partagez avec vos amis 📖
+</footer>
+
+<script>
+  // عداد تنازلي يبدأ من 24 ساعة
+  let countdownTime = 24 * 60 * 60; // بالثواني (24 ساعة)
+  const timerElement = document.getElementById('timer');
+
+  function updateTimer() {
+    let hours = Math.floor(countdownTime / 3600);
+    let minutes = Math.floor((countdownTime % 3600) / 60);
+    let seconds = countdownTime % 60;
+
+    // صيغة العرض: 00:00:00
+    timerElement.textContent = 
+      String(hours).padStart(2, '0') + ':' + 
+      String(minutes).padStart(2, '0') + ':' + 
+      String(seconds).padStart(2, '0');
+
+    if(countdownTime > 0) {
+      countdownTime--;
+    } else {
+      // عندما ينتهي الوقت
+      timerElement.textContent = "Offre expirée";
+    }
+  }
+
+  // تحديث كل ثانية
+  setInterval(updateTimer, 1000);
+</script>
+
+</body>
+</html>
+
+
+
