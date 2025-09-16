@@ -46,6 +46,11 @@
       width: 220px;
       text-align: center;
       padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: translateY(-5px);
     }
 
     .book img {
@@ -85,6 +90,7 @@
       border-radius: 5px;
       text-decoration: none;
       font-size: 14px;
+      transition: background-color 0.3s ease;
     }
 
     .book a:hover {
@@ -96,6 +102,27 @@
       padding: 20px;
       font-size: 14px;
       color: #777;
+    }
+
+    /* Responsive pour mobile */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .book {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+      }
+      .book img {
+        height: auto;
+        max-height: 400px;
+      }
+      #countdown {
+        font-size: 16px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
